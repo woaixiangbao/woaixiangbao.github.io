@@ -1,7 +1,7 @@
 @import "compass";
 @import "varibles";
 
-body{font: 12px/1.5 'Helvetica Neue' , Helvetica,Arial,sans-serif;}
+body{font: 14px/1.5 'Helvetica Neue' , Helvetica,Arial,sans-serif;}
 button::-moz-focus-inner,input[type="submit"]::-moz-focus-inner,input[type="file"] > input[type="button"]::-moz-focus-inner,input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner {border: 0; padding: 0; }
 a{text-decoration: none;color: #{$colorLink};outline:none;}
 a:hover{color: #{$colorLink};text-decoration:underline;}
@@ -10,7 +10,7 @@ a:hover{color: #{$colorLink};text-decoration:underline;}
 .fL,.l{float: left; }
 .fR,.r{float: right;}
 .hide,.dn{display:none;}
-
+ul li ,ul {list-style:none;}
 .pointer{cursor: pointer;}
 .tc{text-align:center;}.tr{text-align:right;}.tl{text-align:left;}.tj{text-align:justify;}
 /*padding*/
