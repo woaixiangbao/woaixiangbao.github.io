@@ -4,3 +4,4 @@ plugins:     ./_plugins
 layouts:     ./_layouts
 auto: true
 permalink: /blog/:year/:month/:day/:title.html
+baseurl: http://woaixiangbao.github.io
