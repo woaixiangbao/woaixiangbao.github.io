@@ -56,7 +56,7 @@ nav:
   - text: 联系我
     url: http://woaixiangbao.github.io/contact.html
   - text: 博客源代码
-    url: https://github.com/woaixiangbao/woaixiangbao.github.com
+    url: https://github.com/woaixiangbao/woaixiangbao.github.io
 
 #theme config
 themes: /themes/violet
