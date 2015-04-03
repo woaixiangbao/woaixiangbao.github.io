@@ -1,6 +1,7 @@
 ---
-layout: default
-title:: hello world
+layout: post
+title: hello world
+description: 刚开始使用jeklly
 ---
 
 #{{ page.title }}
