@@ -1,6 +1,15 @@
-.j{
-  width: 5px;
-  &:hover{
-    border: 1px solid #fff;
-  }
+html,body{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: darkgray;
+}
+body,h1,h2,h3,h4,h5{
+  margin: 0;
+}
+.wrap{
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
 }
