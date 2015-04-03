@@ -95,7 +95,7 @@ author:
 #评论信息
 disqus:
   config: true
-  id: piznblog
+  id: 大竹子君
 
 duoshuo:
   config: false
