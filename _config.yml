@@ -39,8 +39,8 @@ timezone:      null
 
 
 #站点基础配置
-title: Violet
-subTitle: Just another Jekyll blog.
+title: 简庆的blog
+subTitle: 记录工作和生活中的成长点滴
 description: 这里是简庆的blog，用来记录我的工作和生活，特别是在前端开发方面。
 url: http://woaixiangbao.github.io
 feed: /atom.xml
