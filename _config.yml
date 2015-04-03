@@ -95,7 +95,7 @@ author:
 #评论信息
 disqus:
   config: true
-  id: 大竹子君
+  id: jianqing
 
 duoshuo:
   config: false
