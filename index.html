@@ -1,30 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <meta content="yes" name="apple-mobile-web-app-capable" />
-    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
-    <meta content="telephone=no" name="format-detection" />
-    <title>woaixiangbao github personal page</title>
-    <style>
-        h1{
-            font-size: 18px;
-            margin: 30px auto;
-            color: gray;
-            text-align: center;
-        }
-        h2{
-            font-size: 16px;
-            margin: 20px auto;
-            color: midnightblue;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-    <h1>简庆的博客</h1>
-    <h2>目录</h2>
-</body>
-</html>
+---
+layout: default
+title: 我的blog
+---
+<h2>{{ page.title }}</h2>
+
+<p>最新文章</p>
+
+<ul>
+    {% for post in site.posts %}
+        <li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+</ul>

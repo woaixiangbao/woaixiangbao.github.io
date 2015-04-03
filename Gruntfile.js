@@ -12,23 +12,43 @@ module.exports = function(grunt){
 
         config:config,
 
+        compass: {
+            dist: {
+                options: {
+                    config: 'config/config.rb',  // css_dir = 'dev/css'
+                    sassDir:'<%= config.app %>sass',
+                    cssDir: '<%= config.dist %>css'
+                }
+            }
+        },
+        sass: {
+            dist: {
+                files: [{
+                    expand: true,
+                    cwd: '<%= config.app %>sass',
+                    src: ['*.{scss,sass}'],
+                    dest: '<%= config.dist %>css',
+                    ext: '.css'
+                }]
+            }
+        },
         copy:{
             dist: {
-                src:'<%= config.dist %>',
-                dest:'<%= config.app %>'
+                src:'<%= config.app %>',
+                dest:'<%= config.dist %>'
             }
         },
         clean:{
             dist: {
-                src:'<%= config.dist %>c/style/*.min.css'
+                src:'<%= config.dist %>css/*.min.css'
             }
         },
         cssmin:{
             minify:{
                 expand:true,
-                cwd: '<%= config.app %>c/style/',
+                cwd: '<%= config.dist %>css',
                 src:['*.css","!*.min.css'],
-                dest:'<%= config.dist %>c/style/',
+                dest:'<%= config.dist %>css',
                 ext:'.min.css'
             }
         },
