@@ -7,6 +7,27 @@ description: twitter latest favorite
 
 先来看看demo吧：[Demo](http://woaixiangbao.github.com/demo/20150211/twitter-favorite.html)
 
+##效果如下（鼠标悬浮）：
+
+
+<style>
+.demo-fave {
+    border: 1px solid gray;
+    border-radius: 5px;
+    display:inline-block;
+    width: 70px;
+    height: 50px;
+    background: url(http://woaixiangbao.github.com/demo/20150211/twitter_fave.png) no-repeat;
+    background-position: 0 0;
+}
+.demo-fave:hover {
+    background-position: -3519px 0;
+    transition: background 1s steps(55);
+}
+</style>
+
+<span class="demo-fave"></span>
+
 ##html部分是这样的：
 
 {% highlight html linenos %}
@@ -28,3 +49,11 @@ description: twitter latest favorite
     transition: background 1s steps(55);
 }
 {% endhighlight %}
+
+##其中用到的图片是下面这个：
+
+<a href="http://woaixiangbao.github.com/demo/20150211/twitter_fave.png">图片</a>
+
+##原文地址：
+
+[twitter favo](https://cssanimation.rocks/twitter-fave/ "twitter favo")
