@@ -16,6 +16,7 @@
     <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="{{ site.feed }}" />
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Spirax' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/syntax.css"/>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     <title>
@@ -95,5 +96,18 @@
         {% endif %}
     {% endif %}
 {% endif %}
+
+
+<script>
+    function addBlankTargetForLinks () {
+        $('a[href^="http"]').each(function(){
+            $(this).attr('target', '_blank');
+        });
+    }
+
+    $(document).on('DOMNodeInserted', function(event) {
+        addBlankTargetForLinks();
+    });
+</script>
 </body>
 </html>
