@@ -17,8 +17,7 @@ description: twitter 最新的“喜爱”交互动画
     display:inline-block;
     width: 70px;
     height: 50px;
-    background: url(http://woaixiangbao.github.com/demo/20150211/twitter_fave.png) no-repeat;
-    background-position: 0 0;
+    background: url(http://woaixiangbao.github.com/demo/20150211/twitter_fave.png) 0 0 no-repeat;
 }
 .demo-fave:hover {
     background-position: -3519px 0;

@@ -4,19 +4,53 @@
     <meta charset="UTF-8">
     <title>twitter favorite</title>
     <style>
-        .fave {
+        .fave,.fave2 {
             width: 70px;
             height: 50px;
-            background: url(twitter_fave.png) no-repeat;
-            background-position: 0 0;
+            background: url(twitter_fave.png) 0 0 no-repeat;
         }
-        .fave:hover {
+        .fave:hover,.faveHover {
             background-position: -3519px 0;
             transition: background 1s steps(55);
+        }
+        .wrap{
+            width: 300px;
+            margin: 30px auto;
+            border: 1px solid gray;
         }
     </style>
 </head>
 <body>
-<section class="fave"></section>
+<div class="wrap">
+    <h2>鼠标悬浮</h2>
+    <section class="fave"></section>
+    <h2>鼠标点击效果</h2>
+    <section class="fave2"></section>
+</div>
+<script>
+    var fave = document.querySelector(".fave2");
+    fave.addEventListener("click",function(){
+        if(hasClass(fave,"faveHover")){
+            removeClass(fave,"faveHover");
+        }else{
+            addClass(fave,"faveHover");
+        }
+    },false);
+
+    function hasClass(obj,classN){
+        return obj.className.match(new RegExp('(\\s|^)' + classN + '(\\s|$)'));
+    }
+    function addClass(obj,classN){
+        if(!hasClass(obj,classN)){
+            obj.className += ' ' + classN;
+        }
+    }
+    function removeClass(obj,classN){
+        if(hasClass(obj,classN)){
+            var reg = new RegExp('(\\s|^)' + classN + '(\\s|$)');
+            obj.className = obj.className.replace(reg," ");
+        }
+    }
+</script>
 </body>
 </html>
