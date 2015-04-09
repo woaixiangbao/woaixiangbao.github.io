@@ -80,11 +80,13 @@ steps()是一个允许我们一步一步的执行一个动画或者将动画截�
 
     steps(<number_of_steps>,<direction>)
 
-第二个参数定义了我们在@keyframes中声明的发生动画的时间点，可以是“start”或者“end”。这个参数是可选的，如果不填第二个参数，默认是"end"值。如果这个值是“start”，意思就是说动画开始的位置是第一步开始的位置。（我翻译的有点怪怪的，原文如下：）
+第二个参数定义了我们在@keyframes中声明的发生动画的时间点，可以是“start”或者“end”。这个参数是可选的，如果不填第二个参数，默认是"end"值。如果这个值是“start”，意思就是说动画开始的位置是“第一步”开始的位置。（我翻译的有点怪怪的，原文如下：）
 
 <blockquote> The second parameter defines the point at which the action declared in our @keyframes will occur. This value is optional and will default to “end” if left unspecified.  A direction of “start” denotes a left-continuous function and our animation’s first step will be completed as soon as the animation begins. It will jump immediately to the end of the first step and stay there until the end of this step duration.</blockquote>
 
-如果这个值是“end",意思就是说动画开始的位置是第一步结束的位置。这两个值的不同点只是动画从什么位置开始，但是动画还是相同的。
+如果这个值是“end",意思就是说动画开始的位置是“第一步”结束的位置。这两个值的不同点只是动画从什么位置开始，但是动画还是相同的。
+
+>我的理解是这样的，steps函数一是把一个数值分成若干步骤，这样每个步骤就会有一个开始的值和一个结束的值。比如，把一个100像素宽的图片分成5个步骤，那么第一步的意思就是从1像素到第20像素的这一段，所以end关键字的意思就是说动画从第20像素的位置开始，start是从1像素的位置开始。
 
 如果不好理解，下面是图示：
 
@@ -189,3 +191,79 @@ CSS汽车的例子中，steps()分别使用了“end”和“start”关键字�
 ####熊脚印
 
 <img src="http://woaixiangbao.github.io/demo/20150211/printspreview.png">
+
+另一种理解steps()的办法就是真的去做一个真的“步”。这个例子我们将使用熊脚印。这个例子中使用了一个含有六只熊脚印的图片，这个图片被一个div标签包裹，我们想使用steps()来移动div标签来模仿真的熊走路时留下的爪印。
+
+如果不使用steps()，那么只能使用一种连续的运动来移动div标签（也就是一点点出现，那么你可能会看到一只脚印一点点出现），而这明显不是我们所需要的。我们需要一个一个的整只脚印立刻全部出现。
+
+如前所述，这里有6个脚印，我们需要移动这个div所在的图片（675像素宽）立刻出现一个个的整个脚印。
+
+{% highlight css linenos %}
+.cover {
+  animation: walk 7s steps(7, end) infinite;
+}
+
+@keyframes walk {
+  to {
+    transform: translateX(675px);
+  }
+}
+{% endhighlight %}
+
+我们的div将会在7秒钟的时间内分成7步向右移动675像素。大概就是每一步移动的宽度是96像素宽。"end"意思就是说我们的动画的循环状态将会停留在第一秒的那一步完成的位置。
+
+####CSS 进度圈
+
+<img src="/demo/20150211/loaderpreview.png">
+
+在这个例子中，我们会使用"start"这个关键字来变化透明(opacity)属性。我们可以使用steps()通过明确的声明过渡的步数来改变opacity的透明度。使用“start”关键字可以使得颜色以百分比的形式一步步改变并最终使颜色可见度变为完全可见，也就是透明度为1.如果在这里使用“end”关键字的话，最后圆圈的状态将会变成完全不可见，也就是动画刚开始的状态。
+
+整个动画过程将会持续5秒钟总共5步，也就是一秒钟一步。
+
+{% highlight css linenos %}
+.circle {
+  animation: fill 5s steps(5, start) forwards;
+}
+
+@keyframes fill {
+  to {
+    opacity: 1;
+  }
+}
+{% endhighlight %}
+
+完成度的百分数值也使用steps()来完成。
+
+{% highlight css linenos %}
+.percentage {
+  animation: load 4s steps(4, end) forwards;
+}
+
+@keyframes load {
+  to {
+    transform: translateY(-380px);
+  }
+}
+{% endhighlight %}
+
+所有的百分数都是写死在div里面的，我们只是把这个含有百分数的div向上移动了380像素。最开始显示的是20%这个数值，所以我们分4步依次移动这个div，这样就会显示40%，60%，80%和100%。
+
+这次，我们使用了“填充模式”中的forwards“关键字，这和我们之前的例子中的关键字”infinite“不同。如果我们使用”infinite“关键字的话，我们将看不到100%这个数值了，因为"forwards"关键字让动画比我们生命的steps()多走了一步。
+
+####写在最后
+
+steps()不太容易理解，但是只要你会了就不容易忘记。CSS 函数让我们写动画时，既可以定义为步骤动画，又可以定义连续的动画。希望这些demos能让你有所收获！
+
+##总结一下
+
+我觉得我翻译完这个文章以后还是有一些迷惑的地方，但是收获也很大，我学到了：
+
+1.steps()有两个参数，第一个参数是一个正整数。
+
+2.steps()的第二个参数可选的值为"start"和"end"，如果你不写这个参数，默认就是end。
+
+3.end的意思是说动画从第一“步”的结束的位置开始，start的意思是说动画从第一“步”的开始的位置开始。
+
+4.steps()可以配合填充模式使用，可以使用的填充模式的值有forwards和infinite，forwards关键字会让动画完成后不再循环，并且总步数要比声明的步数多一步。如果使用的是infinite关键字，那么就是无限循环了。
+
+基本就这样吧。
