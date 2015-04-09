@@ -32,8 +32,8 @@
   position: absolute;
   width: 100px;
   height: 475px;
-  animation: load 4s steps(4, end) infinite;
-  -webkit-animation: load 4s steps(4, end) infinite;
+  animation: load 4s steps(4, end) forwards;
+  -webkit-animation: load 4s steps(4, end) forwards;
 
 }
 
