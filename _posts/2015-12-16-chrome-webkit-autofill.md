@@ -14,7 +14,7 @@ categories: [css, chrome, 表单]
 
 使用chrome的“开发者工具”，不难看出，这个淡黄色背景和黑色字体是浏览器给定义的：
 
-<img src="http://woaixiangbao.github.io/demo/20150211/autofill2.jpg" />
+<img src="http://woaixiangbao.github.io/demo/20151216/autofill2.jpg" />
 
 
 ####Steps Demos
