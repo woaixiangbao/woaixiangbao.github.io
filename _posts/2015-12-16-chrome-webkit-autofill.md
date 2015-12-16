@@ -35,5 +35,8 @@ input:-webkit-autofill{
 }
 {% endhighlight %}
 
+最终的样子就是这样啦：
+
+<img src="http://woaixiangbao.github.io/demo/20151216/autofill3.jpg" />
 
 这篇文章虽然实在是太简单了，但是大半年没更新了，就这样吧^_^
