@@ -19,9 +19,11 @@ categories: [css, chrome, 表单]
 
 不难看出，控制这个自动填充表单的是个chrome浏览器的自定义属性-webkit-autofill，因此更改黄色背景颜色为白色背景就要这么写了：
 
+>不能写background-color，这个不管用，要用-webkit-box-shadow
+
 {% highlight css linenos %}
 input:-webkit-autofill{
-    background-color: #fff;
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
 {% endhighlight %}
 
