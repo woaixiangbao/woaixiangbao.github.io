@@ -17,29 +17,21 @@ categories: [css, chrome, 表单]
 <img src="http://woaixiangbao.github.io/demo/20151216/autofill2.jpg" />
 
 
-####Steps Demos
-
-你可以从这些[Demos](https://woaixiangbao.github.io/demo/20150211/index.html)中看到下面这些内容：
-
-
-
->严重声明：不要把这个当做真的闹钟用到你的生活中去，因为，这是一个CSS闹钟！
-
-
-####CSS 进度圈
-
-<img src="/demo/20150211/loaderpreview.png">
-
+不难看出，控制这个自动填充表单的是个chrome浏览器的自定义属性-webkit-autofill，因此更改黄色背景颜色为白色背景就要这么写了：
 
 {% highlight css linenos %}
-.percentage {
-  animation: load 4s steps(4, end) forwards;
-}
-
-@keyframes load {
-  to {
-    transform: translateY(-380px);
-  }
+input:-webkit-autofill{
+    background-color: #fff;
 }
 {% endhighlight %}
 
+那么更改黑色文字颜色怎么办呢，修改color的值就行了吗？非也非也，我试过修改color的值是不行的，修改文字颜色需要另外一个chrome的私有属性-webkit-text-flll-color:
+
+{% highlight css linenos %}
+input:-webkit-autofill{
+    -webkit-text-fill-color: #ff0000;
+}
+{% endhighlight %}
+
+
+这篇文章虽然实在是太简单了，但是大半年没更新了，就这样吧^_^
