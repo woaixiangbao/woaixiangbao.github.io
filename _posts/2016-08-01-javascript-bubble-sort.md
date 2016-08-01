@@ -11,8 +11,8 @@ javascript 冒泡排序算法是学习javascript诸多算法中最基本最简�
 
 ##javascript 冒泡排序算法的理论知识
 
-1，依次比较相邻的两个数，如果不符合排序规则，则调换两个数的位置。这样一遍比较下来，能够保证最大（或最小）的数排在最后一位。
-2，再对最后一位以外的数组，重复前面的过程，直至全部排序完成。
+1. 依次比较相邻的两个数，如果不符合排序规则，则调换两个数的位置。这样一遍比较下来，能够保证最大（或最小）的数排在最后一位。
+2. 再对最后一位以外的数组，重复前面的过程，直至全部排序完成。
 
 ###写法一
 
@@ -42,7 +42,7 @@ var num = [3,2,1,5,4];
 bubbleSort(num);
 //[1,2,3,4,5]
 {% endhighlight %}
-上面的代码来自阮一峰的文章：http://javascript.ruanyifeng.com/library/sorting.html
+上面的代码来自阮一峰的文章：[http://javascript.ruanyifeng.com/library/sorting.html](http://javascript.ruanyifeng.com/library/sorting.html)
 ###写法二
 将bubble_sort写到Array的prototype上
 
@@ -65,7 +65,7 @@ num.bubble_sort();
 //[1,2,3,4,5]
 {% endhighlight %}
 
-上面代码来自维基百科：https://zh.wikipedia.org/wiki/冒泡排序
+上面代码来自维基百科：[https://zh.wikipedia.org/wiki/冒泡排序](https://zh.wikipedia.org/wiki/冒泡排序)
 
 第二中写法，只是比第一种写法少了一个变量而已，而且第一种写法的第一遍循环比第二种写法多了一遍循环，看上去阮老师是写错了，我已经给他留言，估计他不久就会改过来吧。
 
