@@ -17,7 +17,7 @@ javascript 冒泡排序算法是学习javascript诸多算法中最基本最简�
 ###写法一
 
 先定义一个交互函数，作用是叫唤两个位置的值。
-```ruby
+```js
 function swap(myArray, p1, p2){
     var temp = myArray[p1];
     myArray[p1] = myArray[p2];
