@@ -12,3 +12,10 @@ Flex 是 Flexible Box的缩写，意为“弹性布局”，用来为盒状模�
 <img src="http://woaixiangbao.github.io/images/20160802/flex.jpg" >
 
 
+要想使你的容器变成一个弹性的盒子，也就是flex布局，实在太简单了！
+
+{% highlight css linenos %}
+.box{
+    display: flex;
+}
+{% endhighlight %}
