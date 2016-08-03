@@ -21,7 +21,7 @@ future:       true
 unpublished:  false
 
 # Conversion
-markdown:     redcarpet
+markdown:     kramdown
 highlighter:  rouge
 lsi:          false
 excerpt_separator: "\n\n"
