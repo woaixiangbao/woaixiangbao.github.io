@@ -5,7 +5,7 @@ description: chrome 表单 自动填充 webkit autofill 颜色 字体 背景颜�
 categories: [css, chrome, 表单]
 ---
 
-##Chrome 浏览器自动填充
+## Chrome 浏览器自动填充
 大家在使用chrome登陆一个网站的时候，或者使用一个曾经填充过的表单的时候，比如登陆之类的表单，对chrome浏览器的自动填充应该不陌生吧，就是下面这样的：
 
 <img src="http://woaixiangbao.github.io/demo/20151216/autofill.jpg" />
