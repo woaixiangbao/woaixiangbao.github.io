@@ -73,10 +73,10 @@ Flex 是 Flexible Box的缩写，意为“弹性布局”，用来为盒状模�
 
 <img src="http://woaixiangbao.github.io/images/20160802/flex.jpg" >
 
-* **row**（默认值）,意思是项目（item）从左往右水平排列，起点在左边。[demo](http://woaixiangbao.github.io/demo/20160802/flex-direction-demo1.html)
-* **column**，意思是项目从上到下垂直排列，起点在上边。[demo](http://woaixiangbao.github.io/demo/20160802/flex-direction-demo2.html)
-* **row-reverse**，其实就是把row反过来，水平从右往左排列，起点在右边，这个值基本都不用的，因为这种情况太少见了，可以不用记住。[demo](http://woaixiangbao.github.io/demo/20160802/flex-direction-demo3.html)
-* **column**，同上，就是把column反过来，垂直从下往上排列，起点在下边，这种奇葩的需求估计也不会用到吧，可以不用记了。[demo](http://woaixiangbao.github.io/demo/20160802/flex-direction-demo4.html)
+* **row**（默认值）,意思是项目（item）从左往右水平排列，起点在左边，主轴就是水平的。[demo](http://woaixiangbao.github.io/demo/20160802/flex-direction-demo1.html)
+* **column**，意思是项目从上到下垂直排列，起点在上边，主轴是垂直的。[demo](http://woaixiangbao.github.io/demo/20160802/flex-direction-demo2.html)
+* **row-reverse**，其实就是把row反过来，水平从右往左排列，起点在右边，这个值基本都不用的，因为这种情况太少见了，可以不用记住，主轴是水平的。[demo](http://woaixiangbao.github.io/demo/20160802/flex-direction-demo3.html)
+* **column**，同上，就是把column反过来，垂直从下往上排列，起点在下边，这种奇葩的需求估计也不会用到吧，可以不用记了，主轴是垂直的。[demo](http://woaixiangbao.github.io/demo/20160802/flex-direction-demo4.html)
 
 所以，99%的情况下，**flex-direction**的值也就是**row**或者**column**，很简单吧。
 
@@ -97,3 +97,15 @@ Flex 是 Flexible Box的缩写，意为“弹性布局”，用来为盒状模�
 
 上面三个属性，其实都受**flex-direction**的控制，如果值是row，那么就是上面说的那么展示，如果是其他值就相应的反过来就对了。
 
+### flex-flow
+这个属性是**flex-direction**和**flex-wrap**属性的简写形式，默认值为这两个属性的默认值，也就是**row nowrap**。
+{% highlight css linenos %}
+.box{
+    flex-flow: <flex-direction> || <flex-wrap>;
+}
+{% endhighlight %}
+
+这个属性基本不用，主要是还要多记一个属性麻烦，直接记住前面两个就好了，这个属性比较多余。
+
+### justify-content
+这个属性定义项目在主轴上的对齐方式。
