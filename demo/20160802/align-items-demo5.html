@@ -2,17 +2,25 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>flex wrap wrap</title>
+    <title>align items stretch</title>
     <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            height: 100%;
+        }
         .box{
+            height: 80%;
             display: flex;
             padding: 2%;
             border: 2px solid rgba(255,0,0,.3);
-            flex-wrap: wrap;
+            align-items: stretch;
         }
         .item{
             width: 200px;
-            height: 100px;
+            height: auto;
             border-radius: 15px;
             border: 1px solid rgba(255,255,0,.3);
             background: rgba(0,255,0,.3);
@@ -24,18 +32,6 @@
     <div class="item">1</div>
     <div class="item">2</div>
     <div class="item">3</div>
-    <div class="item">4</div>
-    <div class="item">5</div>
-    <div class="item">6</div>
-    <div class="item">7</div>
-    <div class="item">8</div>
-    <div class="item">9</div>
-    <div class="item">10</div>
-    <div class="item">11</div>
-    <div class="item">12</div>
-    <div class="item">13</div>
-    <div class="item">14</div>
-    <div class="item">15</div>
 </div>
 </body>
 </html>

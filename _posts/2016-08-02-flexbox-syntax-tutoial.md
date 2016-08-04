@@ -44,13 +44,13 @@ Flex 是 Flexible Box的缩写，意为“弹性布局”，用来为盒状模�
 
 <img src="http://woaixiangbao.github.io/images/20160802/flexbox-visual.png">
 
-容器默认存在两根轴，水平的主轴（**main axis**）和垂直的交叉轴（**cross axis**）。上面图片中的主轴是水平的，但是容器如果设置了**flex-direction**属性，并且值为**column**的话，主轴就会变成垂直的从上到下，相应的交叉轴就会变成图片中的水平轴了。默认**flex-direction**的值是**row**，也就是水平轴为主轴。
+容器默认存在两根轴，水平的主轴（**main axis**）和垂直的侧轴（**cross axis**）。上面图片中的主轴是水平的，但是容器如果设置了**flex-direction**属性，并且值为**column**的话，主轴就会变成垂直的从上到下，相应的侧轴就会变成图片中的水平轴了。默认**flex-direction**的值是**row**，也就是水平轴为主轴。
 
 主轴的开始位置叫做**main start**，结束位置叫做**main end**。
 
-交叉轴的开始位置叫做**cross start**，结束位置叫做**cross end**。
+侧轴的开始位置叫做**cross start**，结束位置叫做**cross end**。
 
-项目默认沿着主轴排列，单个项目占据的主轴空间叫做**main size**，占据的交叉轴空间叫做**cross size**。
+项目默认沿着主轴排列，单个项目占据的主轴空间叫做**main size**，占据的侧轴空间叫做**cross size**。
 
 ## 容器的属性
 
@@ -108,4 +108,55 @@ Flex 是 Flexible Box的缩写，意为“弹性布局”，用来为盒状模�
 这个属性基本不用，主要是还要多记一个属性麻烦，直接记住前面两个就好了，这个属性比较多余。
 
 ### justify-content
-这个属性定义项目在主轴上的对齐方式。
+这个属性定义项目在**主轴**上沿着当前行的对齐方式。
+
+{% highlight css linenos %}
+.box{
+    justify-content: flex-start | flex-end | center | space-between | space-around;
+}
+{% endhighlight %}
+<img src="http://woaixiangbao.github.io/images/20160802/justify-content.png" >
+
+因为对齐方式是和主轴相关的，所以假设主轴是默认的水平从左到右的轴，那么：
+
+* **flex-start**（默认值），左对齐[demo](http://woaixiangbao.github.io/demo/20160802/justify-content-demo1.html)
+* **flex-end**，右对齐[demo](http://woaixiangbao.github.io/demo/20160802/justify-content-demo2.html)
+* **center**，居中对齐[demo](http://woaixiangbao.github.io/demo/20160802/justify-content-demo3.html)
+* **space-between**，两端对齐，项目之间的间隔是相等的，第一个项目的左侧和最后一个项目的右侧空间是相等的[demo](http://woaixiangbao.github.io/demo/20160802/justify-content-demo4.html)
+* **space-around**，每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍[demo](http://woaixiangbao.github.io/demo/20160802/justify-content-demo5.html)
+
+如果改变flex-direction为column的话，就是在垂直方向上的相应对齐方式了(但前提是，垂直方向上的高度必须足够高，否则看上去都是垂直居中的)。
+
+### align-items
+这个属性定义项目在**侧轴**上沿着当前行的对齐方式。当然，前提是垂直轴的高度至少要比项目的高，有个固定高度值，或者100%也可以。
+{% highlight css linenos %}
+.box{
+    align-items: flex-start | flex-end | center | baseline | stretch;
+}
+{% endhighlight %}
+<img src="http://woaixiangbao.github.io/images/20160802/align-items.png" >
+
+* **flex-start** 沿着侧轴的起点对齐[demo](http://woaixiangbao.github.io/demo/20160802/align-items-demo1.html)
+* **flex-end** 沿着侧轴的终点对齐[demo](http://woaixiangbao.github.io/demo/20160802/align-items-demo2.html)
+* **center** 沿着侧轴的中点对齐[demo](http://woaixiangbao.github.io/demo/20160802/align-items-demo3.html)
+* **baseline** 沿着项目第一行文字的基线对齐，(但是如果flex-direction的值设置为column的话，这个值就和设置为flex-start一样了)[demo](http://woaixiangbao.github.io/demo/20160802/align-items-demo4.html)
+* **stretch**（默认值），如果项目本身没有设置高度或者高度为auto，项目高度将占满容器的高度，如果设置了固定高度，这个值就不起作用了。[demo](http://woaixiangbao.github.io/demo/20160802/align-items-demo5.html)
+
+### align-content
+这个属性起作用的前提是，**flex-wrap**必须设置为**wrap**或者**wrap-reverse**，也就是允许项目折行，而且，项目必须足够多已经产生了折行，否则看不出效果。这个属性和justify-content差不多，也是调准项目在容器里的对齐方式，只不过**align-content**是相对于侧轴的。
+
+{% highlight css linenos %}
+.box{
+    align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+}
+{% endhighlight %}
+<img src="http://woaixiangbao.github.io/images/20160802/align-content.png" >
+
+* **flex-start**，与侧轴的起点对齐，默认正常布局的话(flex-direction: row)就是从上到下对齐排列
+* **flex-end**，与侧轴的终点对齐，也就是最后面一行一定要在最下面
+* **center**，与侧轴的中点对齐
+* **space-between**，与侧轴的两端对齐，侧轴的中间空间平均分布
+* **space-around**，每一行垂直方向上的间隔都相等，所以，轴线之间间隔比轴线与边框的间隔大一倍
+* **stretch**（默认值），垂直方向上占满侧轴
+
+
