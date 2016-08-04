@@ -163,4 +163,42 @@ Flex 是 Flexible Box的缩写，意为“弹性布局”，用来为盒状模�
 
 * * *
 
+下面介绍，项目（item）的属性了。
 
+其实，如果项目什么属性都没有，只要学会了以上容器的属性，已经可以写出很多布局了，下面的属性就是一些定制化的需求了，比较重要的属性我会标示出来，是一定要记住的。
+
+### order
+这个属性用来定义项目的排列顺序，默认为0，必须为整数，从0开始，数值小的排在前面，这个属性呢可以不用记住了吧，因为就算不写这个属性，会自动按照dom的书写顺序依次排列的，除非有特殊需要重新排顺序的需求。
+
+{% highlight css linenos %}
+.item{
+    order: <integer>
+}
+{% endhighlight %}
+
+### flex-grow（重要）
+这个属性定义了项目的放大比例，默认为0，也就是如果存在剩余的空间，项目不会放大。只能是正数，负数无效，可以是小数。如果容器中只有一个项目，此项目的**flex-grow**的值大于等于1的话都会占满整个容器。如果容器中有多个项目时，如果所有项目的**flex-grow**的属性都为1，则他们将等分剩余的空间。如果一个项目的**flex-grow**的属性为2，其他项目都为1，则前者占据的剩余空间将比其他项目多一倍。[demo](http://woaixiangbao.github.io/demo/20160802/flex-grow-demo1.html)
+
+{% highlight css linenos %}
+.item{
+    flex-grow: <number>
+}
+{% endhighlight %}
+
+### flex-shrink(重要)
+这个属性定义了项目的缩小比例，默认为1，也就是如果空间不足，该项目将缩小。整个属性的值不能为负值。如果所有项目的flex-shrink的属性都为1，当空间不足的时候，所有项目都将等比缩小[demo](http://woaixiangbao.github.io/demo/20160802/flex-shrink-demo1.html)。如果一个项目的**flex-shrink**属性为0，其他项目都为1，空间不足的时候，前者不缩小[demo](http://woaixiangbao.github.io/demo/20160802/flex-shrink-demo2.html)。
+
+{% highlight css linenos %}
+.item{
+    flex-shrink: <number>;
+}
+{% endhighlight %}
+
+### flex-basis(重要)
+整个属性定义在分配多余的空间之前，项目占据的主轴空间。浏览器根据整个属性，计算主轴是否有多余的空间。默认值是**auto**，即项目的本来大小。如果设置固定值，则项目将占据固定空间。
+
+{% highlight css linenos %}
+.item{
+    flex-basis: <length> | auto;
+}
+{% endhighlight %}
