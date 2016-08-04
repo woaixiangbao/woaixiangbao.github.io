@@ -19,7 +19,7 @@ Flex 是 Flexible Box的缩写，意为“弹性布局”，用来为盒状模�
 
 
 
-{% highlight javascript linenos %}
+{% highlight css linenos %}
 .box{
     display: flex;
 }
@@ -27,7 +27,7 @@ Flex 是 Flexible Box的缩写，意为“弹性布局”，用来为盒状模�
 
 最佳实践是，为了兼容老版本的浏览器，需要加上浏览器前缀：就像下面这样。
 
-{% highlight javascript linenos %}
+{% highlight css linenos %}
 .box {
   display: -webkit-box;
   display: -webkit-flex;
@@ -64,3 +64,30 @@ Flex 是 Flexible Box的缩写，意为“弹性布局”，用来为盒状模�
 
 ### flex-direction
 这个属性定义的是项目在容器中的放置位置，要么是水平排列，要么是垂直排列，不能斜着排列哦^_^
+
+{% highlight css linenos %}
+.box{
+    flex-direction: row |  column | row-reverse | column-reverse;
+}
+{% endhighlight %}
+
+<img src="http://woaixiangbao.github.io/images/20160802/flex.jpg" >
+
+* **row**（默认值）,意思是项目（item）从左往右水平排列，起点在左边。[demo](http://woaixiangbao.github.io/demo/20160802/flex-direction-demo1.html)
+* **column**，意思是项目从上到下垂直排列，起点在上边。[demo](http://woaixiangbao.github.io/demo/20160802/flex-direction-demo2.html)
+* **row-reverse**，其实就是把row反过来，水平从右往左排列，起点在右边，这个值基本都不用的，因为这种情况太少见了，可以不用记住。[demo](http://woaixiangbao.github.io/demo/20160802/flex-direction-demo3.html)
+* **column**，同上，就是把column反过来，垂直从下往上排列，起点在下边，这种奇葩的需求估计也不会用到吧，可以不用记了。[demo](http://woaixiangbao.github.io/demo/20160802/flex-direction-demo4.html)
+
+所以，99%的情况下，**flex-direction**的值也就是**row**或者**column**，很简单吧。
+
+### flex-wrap
+这个属性的定义是，如果一条轴线排列不下了，如何换行。
+
+{% highlight css linenos %}
+.box{
+    flex-wrap: nowrap | wrap | wrap-reverse;
+}
+{% endhighlight %}
+
+<img src="http://woaixiangbao.github.io/images/20160802/flex-wrap.png" >
+
