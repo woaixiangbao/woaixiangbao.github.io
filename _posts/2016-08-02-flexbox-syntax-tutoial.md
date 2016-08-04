@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Flex布局教程
-description: css flexbox flex
+description: 这篇文章介绍flex布局的实践，不知道是不是最佳，不过我觉得看完后应该会知道怎么使用flex布局了
 categories: [css, flexbox, 布局]
 ---
 
@@ -9,7 +9,7 @@ categories: [css, flexbox, 布局]
 
 Flex 是 Flexible Box的缩写，意为“弹性布局”，用来为盒状模型提供最大的灵活性。有了Flex布局，以前写起来很麻烦的“中间列宽度不定，两边列固定宽度的三列布局”或者其他用浮动或者定位来实现的布局方式就都可以一边玩去了。
 
-虽然W3C在2009年就已经提出了Flex布局，但是，由于历史原因，诸多浏览器的支持情况不是太好，就连W3C的语法定义都有几个版本，以前使用起来真是顾虑多多。现在好了，语法已经定型，浏览器支持情况也大有好转，所以，今天我就来和还在为如何布局烦心的前端们一起学习Flex布局。
+虽然W3C在2009年就已经提出了Flex布局，但是，由于历史原因，诸多浏览器的支持情况不是太好，就连W3C的语法定义都有几个版本，以前使用起来真是顾虑多多。现在好了，语法已经基本定型，浏览器支持情况也大有好转，所以，今天我就来和还在为如何布局烦心的前端们一起学习Flex布局。
 
 如果要考虑浏览器兼容情况，可以去[can i use](www.caniuse.com)查询一下。截至今天（2016-08-02）的情况是：
 <img src="http://woaixiangbao.github.io/images/20160802/flex.jpg" >
@@ -19,13 +19,24 @@ Flex 是 Flexible Box的缩写，意为“弹性布局”，用来为盒状模�
 
 
 
-{% highlight css linenos %}
+{% highlight javascript linenos %}
 .box{
     display: flex;
 }
 {% endhighlight %}
 
-（最佳实践是，为了兼容老版本的浏览器，需要加上浏览器前缀。本文只说官方标准语法。）
+最佳实践是，为了兼容老版本的浏览器，需要加上浏览器前缀：就像下面这样。
+
+{% highlight javascript linenos %}
+.box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+{% endhighlight %}
+
+在这里安利一个自动添加前缀的网站吧：[www.pleeease.io/play/](www.pleeease.io/play/)。本文只说官方标准语法。
 
 ## Flex语法简介
 
@@ -33,10 +44,23 @@ Flex 是 Flexible Box的缩写，意为“弹性布局”，用来为盒状模�
 
 <img src="http://woaixiangbao.github.io/images/20160802/flexbox-visual.png">
 
-容器默认存在两根轴，水平的主轴（**main axis**）和垂直的交叉轴（**cross axis**）。
+容器默认存在两根轴，水平的主轴（**main axis**）和垂直的交叉轴（**cross axis**）。上面图片中的主轴是水平的，但是容器如果设置了**flex-direction**属性，并且值为**column**的话，主轴就会变成垂直的从上到下，相应的交叉轴就会变成图片中的水平轴了。默认**flex-direction**的值是**row**，也就是水平轴为主轴。
 
 主轴的开始位置叫做**main start**，结束位置叫做**main end**。
 
 交叉轴的开始位置叫做**cross start**，结束位置叫做**cross end**。
 
 项目默认沿着主轴排列，单个项目占据的主轴空间叫做**main size**，占据的交叉轴空间叫做**cross size**。
+
+## 容器的属性
+
+最重要的属性当然是**display: flex**啦，只有设置了这个，才能成为flex布局嘛，重要提示：只要容器设置了这个，那么其他的比如float、clear、vertical-align等等布局属性就都不管用喽。下面介绍其它的属性：
+
+1. flex-direction
+2. flex-wrap
+3. justify-content
+4. align-items
+5. align-content
+
+### flex-direction
+这个属性定义的是项目在容器中的放置位置，要么是水平排列，要么是垂直排列，不能斜着排列哦^_^
