@@ -1,7 +1,7 @@
 ---
 layout: post
 title: javascript 冒泡排序算法
-description: javascript 冒泡 排序 算法 bubble sort
+description: javascript 实现冒泡排序算法，前端面试必考题目
 categories: [js, 算法, 排序,冒泡]
 ---
 
