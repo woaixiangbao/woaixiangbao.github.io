@@ -159,6 +159,8 @@ Flex 是 Flexible Box的缩写，意为“弹性布局”，用来为盒状模�
 * **space-around**，每一行垂直方向上的间隔都相等，所以，轴线之间间隔比轴线与边框的间隔大一倍[demo](http://woaixiangbao.github.io/demo/20160802/align-content-demo5.html)
 * **stretch**（默认值），垂直方向上占满侧轴(前提是项目本身高度为auto或者没有设置高度)[demo](http://woaixiangbao.github.io/demo/20160802/align-content-demo6.html)
 
+好了，到此为止，容器的所有属性都介绍完了。
 
+* * *
 
 
