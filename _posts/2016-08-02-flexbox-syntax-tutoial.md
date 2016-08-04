@@ -152,11 +152,13 @@ Flex 是 Flexible Box的缩写，意为“弹性布局”，用来为盒状模�
 {% endhighlight %}
 <img src="http://woaixiangbao.github.io/images/20160802/align-content.png" >
 
-* **flex-start**，与侧轴的起点对齐，默认正常布局的话(flex-direction: row)就是从上到下对齐排列
-* **flex-end**，与侧轴的终点对齐，也就是最后面一行一定要在最下面
-* **center**，与侧轴的中点对齐
-* **space-between**，与侧轴的两端对齐，侧轴的中间空间平均分布
-* **space-around**，每一行垂直方向上的间隔都相等，所以，轴线之间间隔比轴线与边框的间隔大一倍
-* **stretch**（默认值），垂直方向上占满侧轴
+* **flex-start**，与侧轴的起点对齐，默认正常布局的话(flex-direction: row)就是从上到下对齐排列[demo](http://woaixiangbao.github.io/demo/20160802/align-content-demo1.html)
+* **flex-end**，与侧轴的终点对齐，也就是最后面一行一定要在最下面[demo](http://woaixiangbao.github.io/demo/20160802/align-content-demo2.html)
+* **center**，与侧轴的中点对齐[demo](http://woaixiangbao.github.io/demo/20160802/align-content-demo3.html)
+* **space-between**，与侧轴的两端对齐，侧轴的中间空间平均分布[demo](http://woaixiangbao.github.io/demo/20160802/align-content-demo4.html)
+* **space-around**，每一行垂直方向上的间隔都相等，所以，轴线之间间隔比轴线与边框的间隔大一倍[demo](http://woaixiangbao.github.io/demo/20160802/align-content-demo5.html)
+* **stretch**（默认值），垂直方向上占满侧轴(前提是项目本身高度为auto或者没有设置高度)[demo](http://woaixiangbao.github.io/demo/20160802/align-content-demo6.html)
+
+
 
 
