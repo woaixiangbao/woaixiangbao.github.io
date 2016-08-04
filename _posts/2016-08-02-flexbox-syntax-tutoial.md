@@ -91,3 +91,9 @@ Flex 是 Flexible Box的缩写，意为“弹性布局”，用来为盒状模�
 
 <img src="http://woaixiangbao.github.io/images/20160802/flex-wrap.png" >
 
+* **no-wrap**(默认值)，一行内显示，无论这一行内有多少个项目，也都不会折行的，如果项目太多，那么不能保证项目按照原来的宽度展示，可能会挤在一起，如果实在挤不下就会在水平方向上出现滚动条。[demo](http://woaixiangbao.github.io/demo/20160802/flex-wrap-demo1.html)
+* **wrap**，多行显示，一行内展示不下了，就另起一行（垂直方向的下面一行）展示，就像我们书写文字似的，自动折行，一般情况下，我们都用这个属性。[demo](http://woaixiangbao.github.io/demo/20160802/flex-wrap-demo2.html)
+* **wrap-reverse**，和wrap正好相反，如果一行展示不下，不是另起一行，而是跑去上面一行了。[demo](http://woaixiangbao.github.io/demo/20160802/flex-wrap-demo3.html)
+
+上面三个属性，其实都受**flex-direction**的控制，如果值是row，那么就是上面说的那么展示，如果是其他值就相应的反过来就对了。
+
