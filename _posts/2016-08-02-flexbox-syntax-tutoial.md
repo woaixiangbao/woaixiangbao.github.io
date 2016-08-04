@@ -11,7 +11,7 @@ Flex 是 Flexible Box的缩写，意为“弹性布局”，用来为盒状模�
 
 虽然W3C在2009年就已经提出了Flex布局，但是，由于历史原因，诸多浏览器的支持情况不是太好，就连W3C的语法定义都有几个版本，以前使用起来真是顾虑多多。现在好了，语法已经基本定型，浏览器支持情况也大有好转，所以，今天我就来和还在为如何布局烦心的前端们一起学习Flex布局。
 
-如果要考虑浏览器兼容情况，可以去[can i use](www.caniuse.com)查询一下。截至今天（2016-08-02）的情况是：
+如果要考虑浏览器兼容情况，可以去[can i use](http://www.caniuse.com)查询一下。截至今天（2016-08-02）的情况是：
 <img src="http://woaixiangbao.github.io/images/20160802/flex.jpg" >
 
 
@@ -36,7 +36,7 @@ Flex 是 Flexible Box的缩写，意为“弹性布局”，用来为盒状模�
 }
 {% endhighlight %}
 
-在这里安利一个自动添加前缀的网站吧：[www.pleeease.io/play/](www.pleeease.io/play/)。本文只说官方标准语法。
+在这里安利一个自动添加前缀的网站吧：[pleeease.io/play/](http://www.pleeease.io/play/)。本文只说官方标准语法。
 
 ## Flex语法简介
 
@@ -56,11 +56,11 @@ Flex 是 Flexible Box的缩写，意为“弹性布局”，用来为盒状模�
 
 最重要的属性当然是**display: flex**啦，只有设置了这个，才能成为flex布局嘛，重要提示：只要容器设置了这个，那么其他的比如float、clear、vertical-align等等布局属性就都不管用喽。下面介绍其它的属性：
 
-1. flex-direction
-2. flex-wrap
-3. justify-content
-4. align-items
-5. align-content
+* flex-direction
+* flex-wrap
+* justify-content
+* align-items
+* align-content
 
 ### flex-direction
 这个属性定义的是项目在容器中的放置位置，要么是水平排列，要么是垂直排列，不能斜着排列哦^_^
