@@ -195,7 +195,7 @@ Flex 是 Flexible Box的缩写，意为“弹性布局”，用来为盒状模�
 {% endhighlight %}
 
 ### flex-basis(重要)
-整个属性定义在分配多余的空间之前，项目占据的主轴空间。浏览器根据整个属性，计算主轴是否有多余的空间。默认值是**auto**，即项目的本来大小。如果设置固定值，则项目将占据固定空间。
+整个属性定义在分配多余的空间之前，项目占据的主轴空间。浏览器根据整个属性，计算主轴是否有多余的空间。默认值是**auto**，即项目的本来大小。如果设置固定值，则项目将占据固定空间。[demo](http://woaixiangbao.github.io/demo/20160802/flex-basis-demo1.html)
 
 {% highlight css linenos %}
 .item{
