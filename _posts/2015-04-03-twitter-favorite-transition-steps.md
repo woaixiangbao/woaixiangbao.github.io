@@ -5,12 +5,12 @@ description: twitter 最新的“喜爱”交互动画
 categories: [css, transition, 动画]
 ---
 
-##从twitter favorite开始
+## 从twitter favorite开始
 前段时间逛twitter（我的twitter地址请点<a href="http://www.twitter.com/jianqing" target="_blank">这里</a>）发现他们的那个“喜欢”的功能换了新的交互形式，点击的时候是个非常炫的动画效果。找了好久，哈哈，功夫不负有心人，被我找到了。
 
 先来看看demo吧：[Demo](http://woaixiangbao.github.com/demo/20150211/twitter-favorite.html)
 
-####效果如下（鼠标悬浮）：
+#### 效果如下（鼠标悬浮）：
 
 <style>
 .demo-fave {
@@ -29,13 +29,13 @@ categories: [css, transition, 动画]
 
 <span class="demo-fave"></span>
 
-####html部分是这样的：
+#### html部分是这样的：
 
 {% highlight html linenos %}
 <section class="fave"></section>
 {% endhighlight %}
 
-####css部分是这样的：
+#### css部分是这样的：
 
 
 {% highlight css linenos %}
@@ -51,17 +51,17 @@ categories: [css, transition, 动画]
 }
 {% endhighlight %}
 
-####其中用到的图片是下面这个：
+#### 其中用到的图片是下面这个：
 
 <img src="http://woaixiangbao.github.com/demo/20150211/twitter_fave.png" alt="twitter favorite" style="width: 100%;" />
 
-####作者原文请看这里：
+#### 作者原文请看这里：
 
 [twitter favo](https://cssanimation.rocks/twitter-fave/ "twitter favo")
 
 这个动画看上去很神奇的样子，其实呢，大部分工作是美术人员完成的，前端只不过用了一个css3中的transition就完成了，其中最核心的就是这个transition-timing-function中的steps的使用了。
 
-##如果使用CSS3动画中的steps()方法
+## 如果使用CSS3动画中的steps()方法
 
     下面是翻译自Joni Trythall的一篇文章
     原文地址是：http://designmodo.com/steps-css-animations/
@@ -74,7 +74,7 @@ categories: [css, transition, 动画]
 
 <a href="https://woaixiangbao.github.io/demo/20150211/index.html">请点击查看demo</a>（友情提示：demo中使用了google font，如果你看不到，可能需要翻墙）
 
-####Steps 简介
+#### Steps 简介
 
 steps()是一个允许我们一步一步的执行一个动画或者将动画截成数个段落的时间函数，而不是一个连续的从一个状态到另一个状态的过度。这个函数有两个参数，第一个参数是一个我们自己定义的想让动画分成多少步的正整数。
 
@@ -92,7 +92,7 @@ steps()是一个允许我们一步一步的执行一个动画或者将动画截�
 
 <img src="http://woaixiangbao.github.io/demo/20150211/stepsvisual.png" />
 
-####填充模式和重复数
+#### 填充模式和重复数
 
 >重复数（Iteration Count)是steps的一个参数，是让动画执行多少步的正整数。transition这个css属性中，其实并没有填充模式（Fill Mode），Fill Mode首先是出现在animation属性中的，虽然官方没有，但是用在这里的确是起了作用，也许是我查看的文献比较古老吧
 
@@ -116,7 +116,7 @@ steps()是一个允许我们一步一步的执行一个动画或者将动画截�
 
 现在，让我们一起看看这些代码并去仔细揣摩其中的原理。
 
-####Steps Demos
+#### Steps Demos
 
 你可以从这些[Demos](https://woaixiangbao.github.io/demo/20150211/index.html)中看到下面这些内容：
 
@@ -128,7 +128,7 @@ steps()是一个允许我们一步一步的执行一个动画或者将动画截�
 
 4.[一个纯CSS制作的进度圈](https://woaixiangbao.github.io/demo/20150211/progress.html)
 
-####CSS 闹钟
+#### CSS 闹钟
 
 <img src="http://woaixiangbao.github.io/demo/20150211/clockpreview.png" />
 
