@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>用canvas画出文字</title>
+    <title>用canvas画出贝塞尔曲线</title>
 </head>
 <body>
 <canvas id="canvas" width='300' height='300px' style='border: 1px solid red;'></canvas>
@@ -11,12 +11,10 @@
     if(canvas.getContext){
        var ctx = canvas.getContext('2d');
     }
-    ctx.font = 'Bold 52px Arial';
-    ctx.textAlign = 'left';
-    ctx.fillStyle = 'blue';
-    ctx.fillText('简庆',10,50);
-    ctx.strokeStyle = 'red';
-    ctx.strokeText('简庆',10,100);
+    ctx.beginPath();
+    ctx.moveTo(113, 41);
+    ctx.bezierCurveTo(99, 199, 296, 294, 271, 138);
+    ctx.stroke();
 </script>
 </body>
 </html>

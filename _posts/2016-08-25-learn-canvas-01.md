@@ -22,7 +22,7 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
 
 但是在页面中画出这么一个方块其实用处不大，canvas最核心的部分是需要配合javascript来绘制图片或者动画的。先从最简单的来，绘制基本图形。
 
-## 绘制一条线的方法
+## 绘制一条直线的方法
 
 ### html部分，下面几个图形的html都是这样的
 {% highlight html linenos %}
@@ -159,3 +159,34 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
 * fillStyle 是配合fillText()方法来用的，如果不写就是页面默认的黑色了。
 * fillText(text,x,y)参数text就是需要展示的文字，x和y就是文字内容的起点坐标。
 * strokeText(text,x,y)参数和上面一样。只不过是空心字而已，如果文字大小不够大，也看不太出来空心。strokeStyle也是配合strokeText来用，如果没有，空心字的边框就是黑色的。
+
+## 绘制一条有弧度的贝塞尔曲线
+
+这里的贝塞尔曲线，[维基百科](https://zh.wikipedia.org/wiki/%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A)，贝塞尔曲线一句参考点的多少分为二次贝塞尔曲线和高阶曲线，canvas提供了三次贝塞尔曲线的方法。
+
+<img src="http://woaixiangbao.github.io/images/20160825/bezierCurveTo.png" >
+
+上图中的Control point1 是参考点1，control point2是参考点2，再加上起点（start）和终点（end）就能画出一条三次贝塞尔曲线了。
+
+
+{% highlight javascript linenos %}
+    <script>
+        var canvas = document.querySelector('#canvas');
+            if(canvas.getContext){
+               var ctx = canvas.getContext('2d');
+            }
+            ctx.beginPath();
+            ctx.moveTo(113, 41);
+            ctx.bezierCurveTo(99, 199, 296, 294, 271, 138);
+            ctx.stroke();
+    </script>
+{% endhighlight %}
+
+上面画出了一个简单的贝塞尔曲线。[demo](http://woaixiangbao.github.io/demo/20160825/canvas-demo8.html)
+
+* moveTo(x,y)是定义贝塞尔曲线的起始点坐标。
+* bezierCurveTo(point1X,point1Y,point2X,point2Y,endX,endY)看这个方法的参数就明白了，剩下的三个点喽。
+
+多次运用贝塞尔曲线，就能画出比较复杂的图形了。[demo](http://woaixiangbao.github.io/demo/20160825/canvas-demo9.html)
+
+上面的demo中就多次运用贝塞尔曲线，画出了一个心形。当然了，如果慢慢的一点点去找参考点绘图，那也太慢了，我找到了一个可以直接绘制贝塞尔曲线的网站，可以直接拷贝自己做好的线条以及方法：[贝塞尔曲线](http://www.victoriakirst.com/beziertool/)
