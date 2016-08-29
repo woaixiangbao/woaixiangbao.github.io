@@ -162,9 +162,15 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
 
 ## 绘制一条有弧度的贝塞尔曲线
 
-这里的贝塞尔曲线，[维基百科](https://zh.wikipedia.org/wiki/%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A)，贝塞尔曲线一句参考点的多少分为二次贝塞尔曲线和高阶曲线，canvas提供了三次贝塞尔曲线的方法。
+这里的贝塞尔曲线，[维基百科](https://zh.wikipedia.org/wiki/%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A)，贝塞尔曲线一句参考点的多少分为二次贝塞尔曲线和高阶曲线，canvas提供了绘制二次和三次贝塞尔曲线的方法。
 
-<img src="http://woaixiangbao.github.io/images/20160825/bezierCurveTo.png" >
+<img src="http://woaixiangbao.github.io/images/20160825/bezierCurveTo2.jpg" >
+
+上图中的start和end分别代表起点和终点，control point1是参考点。
+
+* quadraticCurveTo(pointX,pointY,x,y) pointX和pointY就是参考点的坐标，x和y就是终点的坐标，起点的坐标一般用moveTo来绘制。
+
+<img src="http://woaixiangbao.github.io/images/20160825/bezierCurveTo3.png" >
 
 上图中的Control point1 是参考点1，control point2是参考点2，再加上起点（start）和终点（end）就能画出一条三次贝塞尔曲线了。
 
@@ -182,7 +188,7 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
     </script>
 {% endhighlight %}
 
-上面画出了一个简单的贝塞尔曲线。[demo](http://woaixiangbao.github.io/demo/20160825/canvas-demo8.html)
+上面画出了一个简单的三次贝塞尔曲线。[demo](http://woaixiangbao.github.io/demo/20160825/canvas-demo8.html)
 
 * moveTo(x,y)是定义贝塞尔曲线的起始点坐标。
 * bezierCurveTo(point1X,point1Y,point2X,point2Y,endX,endY)看这个方法的参数就明白了，剩下的三个点喽。
