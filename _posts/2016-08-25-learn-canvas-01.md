@@ -8,7 +8,7 @@ categories: [canvas,html5]
 
 # 认识canvas
 
-<canvas>是html5新增的一个标签（其实已经很多年了），用来定义图形容器。虽然canvas是html的标签主要用来展示图形，不过呢，基本上必须使用javascript来绘制图形或者引用图片才行，所以canvas几乎不能离开javascript。并且javascript也有专用的给canvas绘图的API。
+canvas是html5新增的一个标签（其实已经很多年了），用来定义图形容器。虽然canvas是html的标签主要用来展示图形，不过呢，基本上必须使用javascript来绘制图形或者引用图片才行，所以canvas几乎不能离开javascript。并且javascript也有专用的给canvas绘图的API。
 
 使用canvas非常简单：
 
