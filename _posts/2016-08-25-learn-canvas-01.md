@@ -22,7 +22,7 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
 
 但是在页面中画出这么一个方块其实用处不大，canvas最核心的部分是需要配合javascript来绘制图片或者动画的。先从最简单的来，绘制基本图形。
 
-** 绘制一条线的方法
+## 绘制一条线的方法
 ### html部分
 {% highlight html linenos %}
 <canvas id='canvas' width='300' height='300px' style='border: 1px solid red;'></canvas>
