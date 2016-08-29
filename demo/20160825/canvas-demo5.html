@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>用canvas画一条线</title>
+    <title>用canvas画出一个实心的圆形</title>
 </head>
 <body>
 <canvas id="canvas" width='300' height='300px' style='border: 1px solid red;'></canvas>
@@ -12,12 +12,9 @@
        var ctx = canvas.getContext('2d');
     }
     ctx.beginPath();
-    ctx.moveTo(20,20);
-    ctx.lineTo(50,50);
-    ctx.lineWidth = 1;
-    ctx.strokeStyle = 'red';
-    ctx.stroke();
-    ctx.closePath();
+    ctx.arc(60,60,50,0,Math.PI * 2,true);
+    ctx.fillStyle = 'red';
+    ctx.fill();
 </script>
 </body>
 </html>
