@@ -1,6 +1,6 @@
 ---
 layout: post
-title: canvas入门
+title: canvas入门(一)
 description: html5之canvas学习入门
 categories: [javascript, canvas, html5]
 ---
