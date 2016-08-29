@@ -1,8 +1,8 @@
 ---
 layout: post
-title: javascript canvas html5
-description: canvas入门
-categories: [canvas,html5]
+title: canvas入门
+description: html5之canvas学习入门
+categories: [javascript, canvas, html5]
 ---
 昨天晚上整理移动硬盘，发现2010年的时候学习过html5的canvas动画，做了好多的练习题，一点点回忆起来。可是，现在真让我写一个小球跳动还真不一定的写出来，太长时间不用都给忘光了。今天开始，我把他捡起来重新学习一遍。
 
