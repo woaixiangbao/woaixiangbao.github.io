@@ -29,7 +29,6 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
 {% endhighlight %}
 ### javascript部分
 {% highlight javascript linenos %}
-<script>
     <script>
         var canvas = document.querySelector('#canvas');
         if(canvas.getContext){
@@ -43,7 +42,6 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
         ctx.stroke();
         ctx.closePath();
     </script>
-</script>
 {% endhighlight %}
 
 这样就能在canvas的画布上画出一条线了。[demo](http://woaixiangbao.github.io/demo/20160825/canvas-demo2.html)
