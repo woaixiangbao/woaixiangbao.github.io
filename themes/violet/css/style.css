@@ -127,6 +127,18 @@ a:hover {
 }
 /* =Layout
 --------------------------------------*/
+.main-article h1{
+    margin: 10px;
+    font-size: 34px;
+}
+.main-article h2{
+    margin: 6px;
+    font-size: 24px;
+}
+.main-article h3{
+    margin: 18px;
+    font-size: 34px;
+}
 #viole, .page-wrapper {
     width: 100%;
     height: auto;
