@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>用canvas画出一个空心的矩形</title>
+</head>
+<body>
+<canvas id="canvas" width='300' height='300px' style='border: 1px solid red;'></canvas>
+<script>
+    var canvas = document.querySelector('#canvas');
+    if(canvas.getContext){
+       var ctx = canvas.getContext('2d');
+    }
+    ctx.fillStyle = 'red';
+    ctx.fillRect(30,40,100,100);
+    ctx.clearRect(50,60,60,60);
+    ctx.strokeStyle = 'blue';
+    ctx.strokeRect(60,70,40,40);
+
+</script>
+</body>
+</html>

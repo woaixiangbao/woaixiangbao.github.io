@@ -18,6 +18,8 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
 
 这样就会在页面中绘制出一个长宽300像素的有红色边框的canvas了。[demo](http://woaixiangbao.github.io/demo/20160825/canvas-demo1.html)
 
+注意：canvas的结束标签不能省略，否则canvas标签后面的内容就都会被认为是替代内容从而不能显示了。
+
 # 基本绘图
 
 但是在页面中画出这么一个方块其实用处不大，canvas最核心的部分是需要配合javascript来绘制图片或者动画的。先从最简单的来，绘制基本图形。
@@ -92,9 +94,27 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
 {% endhighlight %}
 
 * strokeRect(x,y,width,height)和fillRect()是一样的，前者自动带一个边框，后者是填充颜色了而已。
-* 这里也可以不写strokeStyle，这样矩形的边框就是黑色的。
+* strokeStyle就是定义边框颜色的。这里也可以不写strokeStyle，这样矩形的边框就是黑色的。
 
 所以，假如你需要画一个带边框颜色并且填充了另外一个颜色的矩形的画，就要组合使用上面的几个方法了。
+
+{% highlight javascript linenos %}
+    <script>
+        var canvas = document.querySelector('#canvas');
+            if(canvas.getContext){
+               var ctx = canvas.getContext('2d');
+            }
+            ctx.fillStyle = 'red';
+            ctx.fillRect(30,40,100,100);
+            ctx.clearRect(50,60,60,60);
+            ctx.strokeStyle = 'blue';
+            ctx.strokeRect(60,70,40,40);
+    </script>
+{% endhighlight %}
+
+[嵌套矩形](http://woaixiangbao.github.io/demo/20160825/canvas-demo4-2.html)
+
+* 上面又新增了一个clearRect(x,y,width,height);是清除一个矩形的方法，可以在指定区域内变透明，上面的例子中就是综合运用三种方法绘制了一个嵌套的矩形。
 
 ## 绘制一个圆形
 
