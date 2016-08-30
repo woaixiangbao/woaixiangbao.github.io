@@ -194,6 +194,7 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
 * bezierCurveTo(point1X,point1Y,point2X,point2Y,endX,endY)看这个方法的参数就明白了，剩下的三个点喽。
 
 多次运用贝塞尔曲线，就能画出比较复杂的图形了。[利用二次贝塞尔曲线绘图](http://woaixiangbao.github.io/demo/20160825/canvas-demo9.html)
+
 [利用三次贝塞尔曲线绘图](http://woaixiangbao.github.io/demo/20160825/canvas-demo10.html)
 
 上面的三次贝塞尔曲线demo中，画出了一个心形。当然了，如果慢慢的一点点去找参考点绘图，那也太慢了，我找到了一个可以直接绘制贝塞尔曲线的网站，可以直接拷贝自己做好的线条以及方法：[贝塞尔曲线](http://www.victoriakirst.com/beziertool/)
