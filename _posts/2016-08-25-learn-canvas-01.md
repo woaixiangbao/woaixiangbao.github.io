@@ -95,6 +95,7 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
 
 * strokeRect(x,y,width,height)和fillRect()是一样的，前者自动带一个边框，后者是填充颜色了而已。
 * strokeStyle就是定义边框颜色的。这里也可以不写strokeStyle，这样矩形的边框就是黑色的。
+* 复杂练习：绘制多个渐变色的矩形[渐变矩形](http://woaixiangbao.github.io/demo/20160825/canvas-demo11.html)
 
 所以，假如你需要画一个带边框颜色并且填充了另外一个颜色的矩形的画，就要组合使用上面的几个方法了。
 
@@ -152,6 +153,7 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
 
 * 配合strokeStyle 和 stroke两个方法，上面就绘制了一个红色边框的空心圆。
 * 如果想绘制一个实心带边框颜色的圆形，就可以组合上面的方法。
+* 复杂练习：绘制多个渐变色的圆[demo](http://woaixiangbao.github.io/demo/20160825/canvas-demo12.html)
 
 绘制了这些基本图形，想在canvas上写字怎么办？
 
