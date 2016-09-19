@@ -202,3 +202,7 @@ Flex 是 Flexible Box的缩写，意为“弹性布局”，用来为盒状模�
     flex-basis: <length> | auto;
 }
 {% endhighlight %}
+
+## 讲了这么多，还是记不住怎么办，出大招了！http://flexboxin5.com/
+
+无论什么样的布局，自己去点一点马上就出来了，非常好用！
