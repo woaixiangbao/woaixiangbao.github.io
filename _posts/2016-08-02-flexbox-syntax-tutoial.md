@@ -71,7 +71,7 @@ Flex 是 Flexible Box的缩写，意为“弹性布局”，用来为盒状模�
 }
 {% endhighlight %}
 
-<img src="http://woaixiangbao.github.io/images/20160802/flex.jpg" >
+<img src="http://woaixiangbao.github.io/images/20160802/flex-direction.jpg" >
 
 * **row**（默认值）,意思是项目（item）从左往右水平排列，起点在左边，主轴就是水平的。[demo](http://woaixiangbao.github.io/demo/20160802/flex-direction-demo1.html)
 * **column**，意思是项目从上到下垂直排列，起点在上边，主轴是垂直的。[demo](http://woaixiangbao.github.io/demo/20160802/flex-direction-demo2.html)
