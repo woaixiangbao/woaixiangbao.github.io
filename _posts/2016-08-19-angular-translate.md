@@ -25,6 +25,7 @@ categories: [angular, translate, placeholder]
 ## 解决方案
 
 使用translate-attr-placeholder指令，这是$translate模块提供的。
+
 ```
 <input type='text' translate translate-attr-placeholder='COMMON.NEW_PASSWORD' >
 
