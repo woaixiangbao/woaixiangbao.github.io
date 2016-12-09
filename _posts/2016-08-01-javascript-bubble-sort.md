@@ -17,16 +17,22 @@ javascript 冒泡排序算法是学习javascript诸多算法中最基本最简�
 ### 写法一
 
 先定义一个交互函数，作用是叫唤两个位置的值。
-{% highlight js linenos %}
+
+```
+
 function swap(myArray, p1, p2){
     var temp = myArray[p1];
     myArray[p1] = myArray[p2];
     myArray[p2] = temp;
 }
-{% endhighlight %}
+
+```
+
 
 然后定义主函数。
-{% highlight js linenos %}
+
+```
+
 function bubbleSort(myArray){
     var len = myArray.length, i, j, stop;
     for(i = 0; i < len; i++){
@@ -41,13 +47,17 @@ function bubbleSort(myArray){
 var num = [3,2,1,5,4];
 bubbleSort(num);
 //[1,2,3,4,5]
-{% endhighlight %}
+
+```
+
 上面的代码来自阮一峰的文章：[http://javascript.ruanyifeng.com/library/sorting.html](http://javascript.ruanyifeng.com/library/sorting.html)
 
 ### 写法二
 将bubble_sort写到Array的prototype上
 
-{% highlight js linenos %}
+
+```
+
 Array.prototype.bubble_sort = function (){
     var i, j, temp;
     for(i = 0;i < this.length -1; i++){
@@ -64,7 +74,9 @@ Array.prototype.bubble_sort = function (){
 var num = [3,2,1,5,4];
 num.bubble_sort();
 //[1,2,3,4,5]
-{% endhighlight %}
+
+```
+
 
 上面代码来自维基百科：[https://zh.wikipedia.org/wiki/冒泡排序](https://zh.wikipedia.org/wiki/冒泡排序)
 

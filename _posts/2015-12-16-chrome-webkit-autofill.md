@@ -21,19 +21,27 @@ categories: [css, chrome, 表单]
 
 >不能写background-color，这个不管用，要用-webkit-box-shadow
 
-{% highlight css linenos %}
+
+```
+
 input:-webkit-autofill{
     -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
-{% endhighlight %}
+
+```
+
 
 那么更改黑色文字颜色怎么办呢，修改color的值就行了吗？非也非也，我试过修改color的值是不行的，修改文字颜色需要另外一个chrome的私有属性-webkit-text-flll-color:
 
-{% highlight css linenos %}
+
+```
+
 input:-webkit-autofill{
     -webkit-text-fill-color: #ff0000;
 }
-{% endhighlight %}
+
+```
+
 
 最终的样子就是这样啦：
 

@@ -7,9 +7,10 @@ categories: [angular, translate, placeholder]
 
 ## input的placeholder默认写法
 
-{% highlight javascript linenos %}
+```
 <input type='text' placeholder='{{"COMMON.PASSWORD" | translate}}' >
-{% endhighlight %}
+
+```
 
 上面的代码展示了Angular 的国际化模块$translate模块的常规用法，这里没什么问题，能正常取出国际化文案。
 
@@ -24,9 +25,9 @@ categories: [angular, translate, placeholder]
 ## 解决方案
 
 使用translate-attr-placeholder指令，这是$translate模块提供的。
-
-{% highlight javascript linenos %}
+```
 <input type='text' translate translate-attr-placeholder='COMMON.NEW_PASSWORD' >
-{% endhighlight %}
+
+```
 
 

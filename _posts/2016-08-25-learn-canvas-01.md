@@ -12,9 +12,10 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
 
 使用canvas非常简单：
 
-{% highlight javascript linenos %}
+```
 <canvas width='300' height='300px' style='border: 1px solid red;'></canvas>
-{% endhighlight %}
+
+```
 
 这样就会在页面中绘制出一个长宽300像素的有红色边框的canvas了。[demo](http://woaixiangbao.github.io/demo/20160825/canvas-demo1.html)
 
@@ -27,11 +28,12 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
 ## 绘制一条直线的方法
 
 ### html部分，下面几个图形的html都是这样的
-{% highlight html linenos %}
+```
 <canvas id='canvas' width='300' height='300px' style='border: 1px solid red;'></canvas>
-{% endhighlight %}
+
+```
 ### javascript部分
-{% highlight javascript linenos %}
+```
     <script>
         var canvas = document.querySelector('#canvas');
         if(canvas.getContext){
@@ -45,7 +47,8 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
         ctx.stroke();
         ctx.closePath();
     </script>
-{% endhighlight %}
+
+```
 
 这样就能在canvas的画布上画出一条线了。[demo](http://woaixiangbao.github.io/demo/20160825/canvas-demo2.html)
 
@@ -63,7 +66,7 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
 
 ### javascript部分
 
-{% highlight javascript linenos %}
+```
     <script>
         var canvas = document.querySelector('#canvas');
             if(canvas.getContext){
@@ -73,7 +76,8 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
             ctx.fillStyle = 'yellow';
             ctx.fillRect(50,50,200,100);
     </script>
-{% endhighlight %}
+
+```
 
 这样就能在canvas的画布上画出一个实心的矩形了。[demo](http://woaixiangbao.github.io/demo/20160825/canvas-demo3.html)
 
@@ -82,7 +86,7 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
 
 如果想画一个空心的矩形是这样的：[demo](http://woaixiangbao.github.io/demo/20160825/canvas-demo4.html)
 
-{% highlight javascript linenos %}
+```
     <script>
         var canvas = document.querySelector('#canvas');
             if(canvas.getContext){
@@ -91,7 +95,8 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
             ctx.strokeStyle = 'red';
             ctx.strokeRect(30,40,50,90);
     </script>
-{% endhighlight %}
+
+```
 
 * strokeRect(x,y,width,height)和fillRect()是一样的，前者自动带一个边框，后者是填充颜色了而已。
 * strokeStyle就是定义边框颜色的。这里也可以不写strokeStyle，这样矩形的边框就是黑色的。
@@ -99,7 +104,7 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
 
 所以，假如你需要画一个带边框颜色并且填充了另外一个颜色的矩形的画，就要组合使用上面的几个方法了。
 
-{% highlight javascript linenos %}
+```
     <script>
         var canvas = document.querySelector('#canvas');
             if(canvas.getContext){
@@ -111,7 +116,8 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
             ctx.strokeStyle = 'blue';
             ctx.strokeRect(60,70,40,40);
     </script>
-{% endhighlight %}
+
+```
 
 [嵌套矩形](http://woaixiangbao.github.io/demo/20160825/canvas-demo4-2.html)
 
@@ -119,7 +125,7 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
 
 ## 绘制一个圆形
 
-{% highlight javascript linenos %}
+```
     <script>
         var canvas = document.querySelector('#canvas');
             if(canvas.getContext){
@@ -130,7 +136,8 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
             ctx.fillStyle = 'red';
             ctx.fill();
     </script>
-{% endhighlight %}
+
+```
 
 这样就画出了一个填充了红色的圆形。[demo](http://woaixiangbao.github.io/demo/20160825/canvas-demo5.html)
 
@@ -138,7 +145,7 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
 
 下面绘制一个空心的圆形。[demo](http://woaixiangbao.github.io/demo/20160825/canvas-demo6.html)
 
-{% highlight javascript linenos %}
+```
     <script>
         var canvas = document.querySelector('#canvas');
             if(canvas.getContext){
@@ -149,7 +156,8 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
             ctx.strokeStyle = 'red';
             ctx.stroke();
     </script>
-{% endhighlight %}
+
+```
 
 * 配合strokeStyle 和 stroke两个方法，上面就绘制了一个红色边框的空心圆。
 * 如果想绘制一个实心带边框颜色的圆形，就可以组合上面的方法。
@@ -159,7 +167,7 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
 
 ## 绘制文本
 
-{% highlight javascript linenos %}
+```
     <script>
         var canvas = document.querySelector('#canvas');
             if(canvas.getContext){
@@ -172,7 +180,8 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
             ctx.strokeStyle = 'red';
             ctx.strokeText('简庆',10,100);
     </script>
-{% endhighlight %}
+
+```
 
 [demo](http://woaixiangbao.github.io/demo/20160825/canvas-demo7.html)
 
@@ -197,7 +206,7 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
 上图中的Control point1 是参考点1，control point2是参考点2，再加上起点（start）和终点（end）就能画出一条三次贝塞尔曲线了。
 
 
-{% highlight javascript linenos %}
+```
     <script>
         var canvas = document.querySelector('#canvas');
             if(canvas.getContext){
@@ -208,7 +217,8 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
             ctx.bezierCurveTo(99, 199, 296, 294, 271, 138);
             ctx.stroke();
     </script>
-{% endhighlight %}
+
+```
 
 上面画出了一个简单的三次贝塞尔曲线。[demo](http://woaixiangbao.github.io/demo/20160825/canvas-demo8.html)
 
