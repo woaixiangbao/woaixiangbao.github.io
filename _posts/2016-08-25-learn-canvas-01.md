@@ -32,7 +32,9 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
 <canvas id='canvas' width='300' height='300px' style='border: 1px solid red;'></canvas>
 
 ```
+
 ### javascript部分
+
 ```
     <script>
         var canvas = document.querySelector('#canvas');
@@ -72,7 +74,6 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
             if(canvas.getContext){
                var ctx = canvas.getContext('2d');
             }
-
             ctx.fillStyle = 'yellow';
             ctx.fillRect(50,50,200,100);
     </script>
