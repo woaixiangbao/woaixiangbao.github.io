@@ -13,25 +13,14 @@ categories: [javascript, angular, directive,scope]
 
 ```
 <!DOCTYPE html>
-<html ng-app="dirAppModule">
+<html ng-app="testApp">
 <head>
-  <title>20.7.4 指令-scope</title>
+  <title>angular-指令-scope</title>
   <meta charset="utf-8">
-  <script src="../angular.js"></script>
-  <script type="text/ng-template" id="text.html">
-    <div>
-      <h3 style="background-color:{{color}}" ng-transclude></h3>
-    </div>
-  </script>
-  <script src="script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 </head>
 <body>
-  <div ng-controller="bgColor">
-    <p>父作用域的color值:{{color}}</p>
-    <input ng-model="color" placeholder="请输入颜色值"/>
-    <br/>
-    <cd-hello><span>code_bunny</span></cd-hello>
-  </div>
+  
 </body>
 </html>
 
