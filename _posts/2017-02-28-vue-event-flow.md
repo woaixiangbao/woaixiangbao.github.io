@@ -8,8 +8,14 @@ categories: [javascript, Vue, vuejs,event]
 
 ## 父级组件传递事件给子级
 
+=== props 属性
+
+
+
 ### demo
 
 ## 子级组件传递事件给父级
 
 ### demo
+
+=== $emit事件
