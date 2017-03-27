@@ -18,7 +18,7 @@ javascript 冒泡排序算法是学习javascript诸多算法中最基本最简�
 
 先定义一个交互函数，作用是叫唤两个位置的值。
 
-```
+```javascript
 
 function swap(myArray, p1, p2){
     var temp = myArray[p1];
@@ -31,7 +31,7 @@ function swap(myArray, p1, p2){
 
 然后定义主函数。
 
-```
+```javascript
 
 function bubbleSort(myArray){
     var len = myArray.length, i, j, stop;
@@ -56,7 +56,7 @@ bubbleSort(num);
 将bubble_sort写到Array的prototype上
 
 
-```
+```javascript
 
 Array.prototype.bubble_sort = function (){
     var i, j, temp;

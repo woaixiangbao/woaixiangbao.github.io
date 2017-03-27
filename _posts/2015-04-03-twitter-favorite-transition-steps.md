@@ -90,7 +90,11 @@ categories: [css, transition, 动画]
 
 steps()是一个允许我们一步一步的执行一个动画或者将动画截成数个段落的时间函数，而不是一个连续的从一个状态到另一个状态的过度。这个函数有两个参数，第一个参数是一个我们自己定义的想让动画分成多少步的正整数。
 
-    steps(<number_of_steps>,<direction>)
+```css
+steps(<number_of_steps>,<direction>)
+
+```
+
 
 第二个参数定义了我们在@keyframes中声明的发生动画的时间点，可以是“start”或者“end”。这个参数是可选的，如果不填第二个参数，默认是"end"值。如果这个值是“start”，意思就是说动画开始的位置是“第一步”开始的位置。（我翻译的有点怪怪的，原文如下：）
 
@@ -115,7 +119,7 @@ steps()是一个允许我们一步一步的执行一个动画或者将动画截�
 这听起来好像有点乱，没关系，我们可以仔细看看这些demo。主要是注意这些变量的设置是如何影响你的动画和"步数"的。下面是使用了infinite关键字和forwards关键字的两辆汽车:
 
 
-```
+```css
 
 .contain-car {
    animation: drive 4s steps(4, end) infinite;
@@ -153,7 +157,7 @@ steps()的完美演示就是闹钟了。我们需要让闹钟的指针旋转，�
 这里使用的steps()需要用到一点数学知识，但是不会太难。我们想让闹钟的秒针在60秒内用60个“步”旋转360度。
 
 
-```
+```css
 
 .second {
   animation: tick-tock 60s steps(60, end) infinite;
@@ -173,7 +177,7 @@ steps()的完美演示就是闹钟了。我们需要让闹钟的指针旋转，�
 分针呢，我们使用了同一个@keyframes，但是需要不同的时间函数。我们知道60*60就是一分钟的秒数，也就是动画的持续时间。那么分针就是60秒走完一圈，也就是旋转360度需要60“步”。
 
 
-```
+```css
 
 .minute {
   animation: tick-tock 3600s steps(60, end) infinite;
@@ -197,7 +201,7 @@ CSS汽车的例子中，steps()分别使用了“end”和“start”关键字�
 >我对end和start翻译的怪怪的，总觉得有点问题，我的理解和作者描述的好像正好相反，如果有谁有更通俗易懂的解释麻烦告诉我一声，谢谢。
 
 
-```
+```css
 
 .contain-car {
   animation: drive 4s steps(4, end) infinite;
@@ -227,7 +231,7 @@ CSS汽车的例子中，steps()分别使用了“end”和“start”关键字�
 如前所述，这里有6个脚印，我们需要移动这个div所在的图片（675像素宽）立刻出现一个个的整个脚印。
 
 
-```
+```css
 
 .cover {
   animation: walk 7s steps(7, end) infinite;
@@ -253,7 +257,7 @@ CSS汽车的例子中，steps()分别使用了“end”和“start”关键字�
 整个动画过程将会持续5秒钟总共5步，也就是一秒钟一步。
 
 
-```
+```css
 
 .circle {
   animation: fill 5s steps(5, start) forwards;
@@ -271,7 +275,7 @@ CSS汽车的例子中，steps()分别使用了“end”和“start”关键字�
 完成度的百分数值也使用steps()来完成。
 
 
-```
+```css
 
 .percentage {
   animation: load 4s steps(4, end) forwards;

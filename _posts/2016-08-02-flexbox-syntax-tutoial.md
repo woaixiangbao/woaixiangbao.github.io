@@ -19,7 +19,7 @@ Flex 是 Flexible Box的缩写，意为“弹性布局”，用来为盒状模�
 
 
 
-```
+```css
 
 .box{
     display: flex;
@@ -31,7 +31,7 @@ Flex 是 Flexible Box的缩写，意为“弹性布局”，用来为盒状模�
 最佳实践是，为了兼容老版本的浏览器，需要加上浏览器前缀：就像下面这样。
 
 
-```
+```javascript
 
 .box {
   display: -webkit-box;
@@ -73,7 +73,7 @@ Flex 是 Flexible Box的缩写，意为“弹性布局”，用来为盒状模�
 这个属性定义的是项目在容器中的放置位置，要么是水平排列，要么是垂直排列，不能斜着排列哦^_^
 
 
-```
+```css
 
 .box{
     flex-direction: row |  column | row-reverse | column-reverse;
@@ -95,7 +95,7 @@ Flex 是 Flexible Box的缩写，意为“弹性布局”，用来为盒状模�
 这个属性的定义是，如果一条轴线排列不下了，如何换行。
 
 
-```
+```css
 
 .box{
     flex-wrap: nowrap | wrap | wrap-reverse;
@@ -115,7 +115,7 @@ Flex 是 Flexible Box的缩写，意为“弹性布局”，用来为盒状模�
 ### flex-flow
 这个属性是**flex-direction**和**flex-wrap**属性的简写形式，默认值为这两个属性的默认值，也就是**row nowrap**。
 
-```
+```css
 
 .box{
     flex-flow: <flex-direction> || <flex-wrap>;
@@ -130,7 +130,7 @@ Flex 是 Flexible Box的缩写，意为“弹性布局”，用来为盒状模�
 这个属性定义项目在**主轴**上沿着当前行的对齐方式。
 
 
-```
+```css
 
 .box{
     justify-content: flex-start | flex-end | center | space-between | space-around;
@@ -153,7 +153,7 @@ Flex 是 Flexible Box的缩写，意为“弹性布局”，用来为盒状模�
 ### align-items
 这个属性定义项目在**侧轴**上沿着当前行的对齐方式。当然，前提是垂直轴的高度至少要比项目的高，有个固定高度值，或者100%也可以。
 
-```
+```css
 
 .box{
     align-items: flex-start | flex-end | center | baseline | stretch;
@@ -173,7 +173,7 @@ Flex 是 Flexible Box的缩写，意为“弹性布局”，用来为盒状模�
 这个属性起作用的前提是，**flex-wrap**必须设置为**wrap**或者**wrap-reverse**，也就是允许项目折行，而且，项目必须足够多已经产生了折行，否则看不出效果。这个属性和justify-content差不多，也是调准项目在容器里的对齐方式，只不过**align-content**是相对于侧轴的。
 
 
-```
+```css
 
 .box{
     align-content: flex-start | flex-end | center | space-between | space-around | stretch;
@@ -202,7 +202,7 @@ Flex 是 Flexible Box的缩写，意为“弹性布局”，用来为盒状模�
 这个属性用来定义项目的排列顺序，默认为0，必须为整数，从0开始，数值小的排在前面，这个属性呢可以不用记住了吧，因为就算不写这个属性，会自动按照dom的书写顺序依次排列的，除非有特殊需要重新排顺序的需求。
 
 
-```
+```css
 
 .item{
     order: <integer>
@@ -215,7 +215,7 @@ Flex 是 Flexible Box的缩写，意为“弹性布局”，用来为盒状模�
 这个属性定义了项目的放大比例，默认为0，也就是如果存在剩余的空间，项目不会放大。只能是正数，负数无效，可以是小数。如果容器中只有一个项目，此项目的**flex-grow**的值大于等于1的话都会占满整个容器。如果容器中有多个项目时，如果所有项目的**flex-grow**的属性都为1，则他们将等分剩余的空间。如果一个项目的**flex-grow**的属性为2，其他项目都为1，则前者占据的剩余空间将比其他项目多一倍。[demo](http://woaixiangbao.github.io/demo/20160802/flex-grow-demo1.html)
 
 
-```
+```css
 
 .item{
     flex-grow: <number>
@@ -228,7 +228,7 @@ Flex 是 Flexible Box的缩写，意为“弹性布局”，用来为盒状模�
 这个属性定义了项目的缩小比例，默认为1，也就是如果空间不足，该项目将缩小。整个属性的值不能为负值。如果所有项目的flex-shrink的属性都为1，当空间不足的时候，所有项目都将等比缩小[demo](http://woaixiangbao.github.io/demo/20160802/flex-shrink-demo1.html)。如果一个项目的**flex-shrink**属性为0，其他项目都为1，空间不足的时候，前者不缩小[demo](http://woaixiangbao.github.io/demo/20160802/flex-shrink-demo2.html)。
 
 
-```
+```css
 
 .item{
     flex-shrink: <number>;
@@ -241,7 +241,7 @@ Flex 是 Flexible Box的缩写，意为“弹性布局”，用来为盒状模�
 整个属性定义在分配多余的空间之前，项目占据的主轴空间。浏览器根据整个属性，计算主轴是否有多余的空间。默认值是**auto**，即项目的本来大小。如果设置固定值，则项目将占据固定空间。[demo](http://woaixiangbao.github.io/demo/20160802/flex-basis-demo1.html)
 
 
-```
+```css
 
 .item{
     flex-basis: <length> | auto;

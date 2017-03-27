@@ -11,7 +11,7 @@ categories: [javascript, angular, directive,scope]
 
 ### 1.5.8 指令绑定
 
-```
+```html
 <!DOCTYPE html>
 <html ng-app="testApp">
 <head>

@@ -12,7 +12,7 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
 
 使用canvas非常简单：
 
-```
+```html
 <canvas width='300' height='300px' style='border: 1px solid red;'></canvas>
 
 ```
@@ -28,15 +28,15 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
 ## 绘制一条直线的方法
 
 ### html部分，下面几个图形的html都是这样的
-```
+```html
 <canvas id='canvas' width='300' height='300px' style='border: 1px solid red;'></canvas>
 
 ```
 
 ### javascript部分
 
-```
-    <script>
+```javascript
+    
         var canvas = document.querySelector('#canvas');
         if(canvas.getContext){
            var ctx = canvas.getContext('2d');
@@ -48,9 +48,9 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
         ctx.strokeStyle = 'red';
         ctx.stroke();
         ctx.closePath();
-    </script>
-
 ```
+
+
 
 这样就能在canvas的画布上画出一条线了。[demo](http://woaixiangbao.github.io/demo/20160825/canvas-demo2.html)
 
@@ -68,15 +68,15 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
 
 ### javascript部分
 
-```
-    <script>
-        var canvas = document.querySelector('#canvas');
-            if(canvas.getContext){
-               var ctx = canvas.getContext('2d');
-            }
-            ctx.fillStyle = 'yellow';
-            ctx.fillRect(50,50,200,100);
-    </script>
+```javascript
+    
+var canvas = document.querySelector('#canvas');
+    if(canvas.getContext){
+       var ctx = canvas.getContext('2d');
+    }
+    ctx.fillStyle = 'yellow';
+    ctx.fillRect(50,50,200,100);
+    
 
 ```
 
@@ -87,15 +87,13 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
 
 如果想画一个空心的矩形是这样的：[demo](http://woaixiangbao.github.io/demo/20160825/canvas-demo4.html)
 
-```
-    <script>
-        var canvas = document.querySelector('#canvas');
-            if(canvas.getContext){
-               var ctx = canvas.getContext('2d');
-            }
-            ctx.strokeStyle = 'red';
-            ctx.strokeRect(30,40,50,90);
-    </script>
+```javascript
+    var canvas = document.querySelector('#canvas');
+        if(canvas.getContext){
+           var ctx = canvas.getContext('2d');
+        }
+        ctx.strokeStyle = 'red';
+        ctx.strokeRect(30,40,50,90);
 
 ```
 
@@ -105,18 +103,16 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
 
 所以，假如你需要画一个带边框颜色并且填充了另外一个颜色的矩形的画，就要组合使用上面的几个方法了。
 
-```
-    <script>
-        var canvas = document.querySelector('#canvas');
-            if(canvas.getContext){
-               var ctx = canvas.getContext('2d');
-            }
-            ctx.fillStyle = 'red';
-            ctx.fillRect(30,40,100,100);
-            ctx.clearRect(50,60,60,60);
-            ctx.strokeStyle = 'blue';
-            ctx.strokeRect(60,70,40,40);
-    </script>
+```javascript
+    var canvas = document.querySelector('#canvas');
+    if(canvas.getContext){
+       var ctx = canvas.getContext('2d');
+    }
+    ctx.fillStyle = 'red';
+    ctx.fillRect(30,40,100,100);
+    ctx.clearRect(50,60,60,60);
+    ctx.strokeStyle = 'blue';
+    ctx.strokeRect(60,70,40,40);
 
 ```
 
@@ -126,17 +122,15 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
 
 ## 绘制一个圆形
 
-```
-    <script>
-        var canvas = document.querySelector('#canvas');
-            if(canvas.getContext){
-               var ctx = canvas.getContext('2d');
-            }
-            ctx.beginPath();
-            ctx.arc(60,60,50,0,Math.PI * 2,true);
-            ctx.fillStyle = 'red';
-            ctx.fill();
-    </script>
+```javascript
+var canvas = document.querySelector('#canvas');
+    if(canvas.getContext){
+       var ctx = canvas.getContext('2d');
+    }
+    ctx.beginPath();
+    ctx.arc(60,60,50,0,Math.PI * 2,true);
+    ctx.fillStyle = 'red';
+    ctx.fill();
 
 ```
 
@@ -146,17 +140,15 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
 
 下面绘制一个空心的圆形。[demo](http://woaixiangbao.github.io/demo/20160825/canvas-demo6.html)
 
-```
-    <script>
-        var canvas = document.querySelector('#canvas');
-            if(canvas.getContext){
-               var ctx = canvas.getContext('2d');
-            }
-            ctx.beginPath();
-            ctx.arc(60,60,50,0,Math.PI * 2,true);
-            ctx.strokeStyle = 'red';
-            ctx.stroke();
-    </script>
+```javascript
+var canvas = document.querySelector('#canvas');
+    if(canvas.getContext){
+       var ctx = canvas.getContext('2d');
+    }
+    ctx.beginPath();
+    ctx.arc(60,60,50,0,Math.PI * 2,true);
+    ctx.strokeStyle = 'red';
+    ctx.stroke();
 
 ```
 
@@ -168,19 +160,17 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
 
 ## 绘制文本
 
-```
-    <script>
-        var canvas = document.querySelector('#canvas');
-            if(canvas.getContext){
-               var ctx = canvas.getContext('2d');
-            }
-            ctx.font = 'Bold 52px Arial';
-            ctx.textAlign = 'left';
-            ctx.fillStyle = 'blue';
-            ctx.fillText('简庆',10,50);
-            ctx.strokeStyle = 'red';
-            ctx.strokeText('简庆',10,100);
-    </script>
+```javascript
+var canvas = document.querySelector('#canvas');
+    if(canvas.getContext){
+       var ctx = canvas.getContext('2d');
+    }
+    ctx.font = 'Bold 52px Arial';
+    ctx.textAlign = 'left';
+    ctx.fillStyle = 'blue';
+    ctx.fillText('简庆',10,50);
+    ctx.strokeStyle = 'red';
+    ctx.strokeText('简庆',10,100);
 
 ```
 
@@ -207,17 +197,17 @@ canvas是html5新增的一个标签（其实已经很多年了），用来定义
 上图中的Control point1 是参考点1，control point2是参考点2，再加上起点（start）和终点（end）就能画出一条三次贝塞尔曲线了。
 
 
-```
-    <script>
-        var canvas = document.querySelector('#canvas');
-            if(canvas.getContext){
-               var ctx = canvas.getContext('2d');
-            }
-            ctx.beginPath();
-            ctx.moveTo(113, 41);
-            ctx.bezierCurveTo(99, 199, 296, 294, 271, 138);
-            ctx.stroke();
-    </script>
+```javascript
+
+var canvas = document.querySelector('#canvas');
+    if(canvas.getContext){
+       var ctx = canvas.getContext('2d');
+    }
+    ctx.beginPath();
+    ctx.moveTo(113, 41);
+    ctx.bezierCurveTo(99, 199, 296, 294, 271, 138);
+    ctx.stroke();
+
 
 ```
 
