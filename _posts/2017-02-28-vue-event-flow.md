@@ -15,11 +15,9 @@ Vue使用Prop选项来把父级组件的数据传递给子组件。
     
 
 
-### demo
+### 写了一个button的简单的小demo
 
-<p data-height="265" data-theme-id="0" data-slug-hash="KWxgbW" data-default-tab="js,result" data-user="woaixiangbao" data-embed-version="2" data-pen-title="vue-事件传递" class="codepen">See the Pen <a href="http://codepen.io/woaixiangbao/pen/KWxgbW/"> vue-事件传递 </a> by jianqing ( <a href="http://codepen.io/woaixiangbao"> @woaixiangbao </a>) on <a href="http://codepen.io">CodePen</a> . </p>
- <script src="https://production-assets.codepen.io/assets/embed/ei.js">
- </script>
+[button](http://codepen.io/woaixiangbao/pen/KWxgbW) 小组件，根据父级传递的不同"bd-color"属性，可以改变button的边框颜色
 
 ## 子级组件传递事件给父级
 
