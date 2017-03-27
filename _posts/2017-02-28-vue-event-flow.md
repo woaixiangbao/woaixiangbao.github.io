@@ -17,8 +17,8 @@ Vue使用Prop选项来把父级组件的数据传递给子组件。
 
 ### demo
 
-<p data-height="265" data-theme-id="0" data-slug-hash="KWxgbW" data-default-tab="js,result" data-user="woaixiangbao" data-embed-version="2" data-pen-title="vue-事件传递" class="codepen">See the Pen <a href="http://codepen.io/woaixiangbao/pen/KWxgbW/">vue-事件传递</a> by jianqing (<a href="http://codepen.io/woaixiangbao">@woaixiangbao</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<p data-height="265" data-theme-id="0" data-slug-hash="KWxgbW" data-default-tab="js,result" data-user="woaixiangbao" data-embed-version="2" data-pen-title="vue-事件传递" class="codepen">See the Pen <a href="http://codepen.io/woaixiangbao/pen/KWxgbW/"> vue-事件传递 </a> by jianqing ( <a href="http://codepen.io/woaixiangbao"> @woaixiangbao </a>) on <a href="http://codepen.io">CodePen</a> . </p>
+ <script src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 ## 子级组件传递事件给父级
 
