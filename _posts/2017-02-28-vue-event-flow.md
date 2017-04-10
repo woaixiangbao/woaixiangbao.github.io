@@ -11,9 +11,9 @@ categories: [javascript, Vue, vuejs,event]
 Vue使用Prop选项来把父级组件的数据传递给子组件。
 
 
-### 写了一个button的简单的小demo
+---- 写了一个button的简单的小demo
 
-[button](http://codepen.io/woaixiangbao/pen/KWxgbW) button小组件，根据父级传递的不同"bd-color"属性，可以改变button的边框颜色.
+[button](http://codepen.io/woaixiangbao/pen/KWxgbW) 小组件，根据父级传递的不同"bd-color"属性，可以改变button的边框颜色.
 
 通过改变传递给组件的不同"bd-color"属性，可以改变button的边框颜色。
 
