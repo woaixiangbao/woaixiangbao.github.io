@@ -99,3 +99,5 @@ disqus:
 
 duoshuo:
   config: false
+
+theme: jekyll-theme-cayman
