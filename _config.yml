@@ -100,4 +100,4 @@ disqus:
 duoshuo:
   config: false
 
-theme: jekyll-theme-cayman
+theme: jekyll-theme-minimal
