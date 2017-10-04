@@ -7,4 +7,4 @@ description: 刚开始使用jeklly
 ### {{ page.title }}
 
 
-我的第一篇文章
+我的第一篇文章。
