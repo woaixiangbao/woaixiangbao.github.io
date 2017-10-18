@@ -9,7 +9,7 @@ exclude:
   - "/vendor/"
 
 # Site settings
-title: jianqing's blog
+title: 简庆的博客
 subtitle: "记录有关前端的一些知识"
 email: blessjq@gmail.com
 name: jian qing
