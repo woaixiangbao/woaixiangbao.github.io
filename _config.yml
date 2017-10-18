@@ -9,8 +9,8 @@ exclude:
   - "/vendor/"
 
 # Site settings
-title: jianqing's blog
-subtitle: "jianqing's blog"
+title: jianqing blog
+subtitle: "jianqing blog"
 email: blessjq@gmail.com
 name: jian qing
 description: >- # this means to ignore newlines until "baseurl:"
